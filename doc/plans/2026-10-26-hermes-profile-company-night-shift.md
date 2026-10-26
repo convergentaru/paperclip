@@ -100,6 +100,8 @@ Prefer hermes_local when Paperclip and Hermes are on the same trusted host. Use 
 
 If the adapter cannot reliably isolate profiles, stop and implement/test a supported profile selector before registering all employees.
 
+**Important safety finding from this fork's current adapter source:** the Hermes local adapter unconditionally appends the CLI flag `--yolo` for non-interactive heartbeat execution. That bypasses Hermes' interactive dangerous-command confirmation prompts. Do not assume Hermes tool confirmations protect Paperclip-run tasks. Before allowing shell/file access to consequential repositories, prove what Paperclip workspace isolation, permissions and execution sandbox actually enforce. Initial smoke tests must be documentation-only, use a disposable branch/worktree, and must not include USB tools, device-write commands, internal-disk access, credential management, global configuration changes, merge/push, or release operations. If there is no enforceable restriction for a proposed task, keep it manual and require human-attended execution.
+
 ## Night → Foreman → owner workflow
 
 1. Paperclip assigns one bounded task to the Night Engineer.
