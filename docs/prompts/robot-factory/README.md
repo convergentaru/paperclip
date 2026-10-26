@@ -21,7 +21,16 @@
 4. **[03 — Проверить рабочий цикл и подготовить ночную смену с утренним Foreman](03-night-shift-and-morning-foreman.md)**  
    Настроить независимую проверку и расписания только после подтверждения изоляции, корректной маршрутизации профилей и успешного ручного теста.
 
+5. **[05 — Синхронизировать runbook с JetBrains, Obsidian и индексом](05-sync-runbook-to-jetbrains-obsidian.md)**  
+   Скопировать каноническую инструкцию в локальный проект и Obsidian vault, обновить существующие индексы, проверить GBrain по реальной документации и сверить SHA-256 копий. Этот промпт изменяет только документацию, не USB.
+
+
 Практическая последовательность важнее порядка документов. **Сначала запусти промпт № 4 и двигай rescue-флешку вперёд.** К Paperclip и профилям переходи небольшими порциями после того, как выполнил доступный практический шаг. Самообучение фиксируй на основе реальных наблюдений, не вместо работы. Не пытайся выполнить все этапы в одном гигантском контексте и не запускай две тяжёлые генерации параллельно.
+
+## Канонический runbook rescue-флешки
+
+- [Acer Rescue: USB, физическая загрузка, Tailscale + SSH](https://github.com/convergentaru/hermes-agent-self-evolution/blob/feat/local-verified-learning-loop/docs/runbooks/ACER-RESCUE-USB-AND-SSH-RU.md)
+- [Промпт синхронизации в JetBrains/Obsidian/GBrain](https://github.com/convergentaru/hermes-agent-self-evolution/blob/feat/local-verified-learning-loop/docs/HERMES-RUNBOOK-SYNC-PROMPT-RU.md)
 
 ## Исходные материалы
 
