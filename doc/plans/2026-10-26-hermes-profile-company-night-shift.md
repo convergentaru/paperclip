@@ -125,6 +125,24 @@ If the adapter cannot reliably isolate profiles, stop and implement/test a suppo
 
 Do not claim Telegram/email/push delivery until it is configured and tested end to end.
 
+## Manual morning review — active before automation
+
+The intended night-worker / morning-Foreman cycle is **not yet an enabled autonomous service**. Until the deployed Paperclip routines, worker isolation and independent review gates pass their acceptance tests, the owner manually starts the morning review. Do not describe this as a scheduled wake-up or autonomous overnight run.
+
+At the beginning of each owner-led work session:
+
+1. Read the current Robot Factory plan, prompt queue and open cross-project execution issues.
+2. Review the active PC Rescue production backlog: [Issue #7 — complete the 36-topic SystemRescue 13.02 Russian documentation and release a physically tested rescue USB](https://github.com/convergentaru/pc-rescue-platform/issues/7).
+3. Read its linked [36-topic translation roadmap](https://github.com/convergentaru/pc-rescue-platform/blob/research/troubleshooting-knowledge-20261028/docs/SYSTEMRESCUE-RU-TRANSLATION-ROADMAP.md), [translation recovery audit](https://github.com/convergentaru/pc-rescue-platform/blob/main/docs/SYSTEMRESCUE-TRANSLATION-RECOVERY-AND-CONTEXT-AUDIT-2026-10-31.md), [ISO rebuild plan](https://github.com/convergentaru/pc-rescue-platform/blob/main/docs/RESCUE-USB-ISO-AUDIT-REVIEW-AND-REBUILD-PLAN-2026-10-31.md), and latest local/GitHub evidence.
+4. Compare actual changes: Git commits and diffs, file presence, full SHA-256 values, build logs, test outputs and physical-device evidence. An agent's summary or a closed session is not proof.
+5. Report Russian documentation progress as **n/36 topics** and **n/16 planned articles** (or explain a revised article count); separately report source review, translation QA, lab tests and physical tests.
+6. Report the USB release gates independently: source checksum → recipe review → ISO build/content/checksum → QEMU BIOS/UEFI → exact USB identity and owner approval → physical HP boot → network and restricted SSH/reverse-SSH test.
+7. State what changed since the previous review, what is blocked or needs approval, and choose exactly one highest-value next action.
+
+The PC Rescue translation and USB release are now a named priority workstream, not an informal side note. The eight-file Hermes subagent job from 2026-10-28 is a historical subtask inside the larger 36-topic coverage map; it must not cap or replace the full scope.
+
+**Current operating mode:** manual owner-led review. Routines remain paused/disabled until every safety and handoff gate in Phase 2 has been independently verified. No physical USB write, internal-disk change, merge or release is authorized by this review.
+
 ## Scheduling, budgets and hardware limits
 
 - Initial routines run sequentially; do not run the night model and Foreman concurrently on the RTX 3060 without measured evidence.
